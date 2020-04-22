@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">{% csrf_token %}
+    <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">@</span>
+        </div>
+        <input type="text" id = 'input_sentiment' class="form-control" name = 'sentiment' aria-describedby="addon-wrapping">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <h3>Negative : {{ negative }}</h3>
+    <h3>Positive : {{ positive }}</h3>
+    <h3>Neutral : {{ neutral }} </h3>
+</body>
+</html>
