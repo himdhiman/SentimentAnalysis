@@ -25,7 +25,7 @@ SECRET_KEY = '2cg#n!f_y&3x_kc3gr3d@&safg&)b=kw6%l%!&+$)^5^*^9h1='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['himsent.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

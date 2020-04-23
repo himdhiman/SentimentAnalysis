@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -14,19 +15,26 @@
         <header>
             <h1>Sentiment Analysis</h1>
         </header>
-        <form method="post">{% csrf_token %}
-            <hr><input type="text" name = 'sentiment' style="width: 1100px;">
-            <hr><button class="btn btn-primary" type="submit">SUBMIT</button>
+        <form id = "sent_form" method="POST">
+            {% csrf_token %}
+            <hr><input type="text" name = 'sentiment' style="width: 1100px;" id="my_input">
+            <hr><button class="btn btn-primary" type ="submit">SUBMIT</button>
             <hr>
         </form>
-        <p style="height: 24;">Positive : {{ positive }}</p>
-        <p>Neutral : {{ neutral }}</p>
-        <p>Negative : {{ negative }}</p>
+        <p style="height: 24;">Positive : 
+            <div id = 'pos'></div><h3></h3></p>
+        <p>Neutral:
+            <div id = 'neu'><h3></h3></div>
+        </p>
+        <p>Negative:
+            <div id = 'neg'><h3></h3></div>
+        </p>
         <div class="card"></div>
         <hr>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/my_js.js' %}"></script>
 </body>
 
 </html>
