@@ -19,9 +19,11 @@
         </header>
         <form id = "sent_form" method="POST">
             {% csrf_token %}
-            <hr><input type="text" name = 'sentiment' style="width: 1100px;" id="my_input">
-            <hr><button class="btn btn-primary" type ="submit">SUBMIT</button>
-            <hr>
+            <hr><input type="text" name = 'sentiment' id="my_input">
+            <br><br>
+            <button class = "submit_button" class="btn btn-primary" type ="submit">SUBMIT</button>
+            <br>
+            <div class="card"></div>
         </form>
         <div class="container">
             <div class="row">
