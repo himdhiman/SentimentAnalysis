@@ -21,4 +21,4 @@ def Index(request):
         }
         return JsonResponse(data, safe = False)
     else:
-        return render(request, 'index.html')
+        return render(request, 'home.html')

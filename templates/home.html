@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" type="text/css" href="static/Semantic-UI-CSS-master/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" 
+    crossorigin="anonymous"></script>
+    <script src="static/Semantic-UI-CSS-master/semantic.min.js"></script>
+</head>
+<body>
+    <div class="ui container">
+        <br>
+        <h1 class="ui center aligned icon header" style = "font-family: monospace;">
+            <i class="smile icon"></i>
+            Sentiment Analysis
+        </h1>
+        <br>
+        <form id = "sent_form" method="post">
+            {% csrf_token %}
+            <div class="ui icon input" data-children-count="1" style="width: 100%;">
+                <input type="text" placeholder="Enter text" name="sentiment" id="my_input">
+                <button class="ui basic button" type="submit">
+                    <i class="smile outline icon"></i>
+                    Analyze
+                </button>
+            </div>
+        </form>
+        <br><br>
+        <div class="ui three column grid">
+            <div class="column">
+              <div class="ui segment">
+                <i class="smile outline icon" style="align-items: center;"></i>
+                <p id="pos"></p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui segment">
+                <i class="meh outline icon"></i>
+                <p id = "neu"></p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui segment">
+                <i class="frown outline icon"></i>
+                <p id = "neg"></p>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="{% static 'js/my_js.js' %}"></script>
+</body>
+</html>
