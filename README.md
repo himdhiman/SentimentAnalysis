@@ -1,5 +1,7 @@
 # SentimentAnalysis
 
+> On Windows
+
       $ git clone https://github.com/himdhiman/SentimentAnalysis.git
       $ cd SentimentAnalysis
       $ pip install virtualenv env
