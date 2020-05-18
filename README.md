@@ -1,5 +1,8 @@
 # SentimentAnalysis
 
+### Requirements
+      - Python 3 or Above
+
 > On Windows
 
       $ git clone https://github.com/himdhiman/SentimentAnalysis.git
