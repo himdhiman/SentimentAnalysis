@@ -22,4 +22,4 @@
       $ python manange.py runserver
       
 ### Website Demo
-      - himsent.herokuapp.com
+      (himsent.herokuapp.com)
