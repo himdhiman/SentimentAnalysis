@@ -20,3 +20,6 @@
       $ source env/bin/activate
       $ pip install -r requirements.txt
       $ python manange.py runserver
+      
+### Website Demo
+      - himsent.herokuapp.com
